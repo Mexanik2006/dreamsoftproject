@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSS7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,27 +18,33 @@
 <body>
     <header>
         <div class="nav-icon">
-            <img src="./images/icon.png" alt="">
+            <img src="./images/icon.png" alt="DreamSoft Logo">
         </div>
-        <div class="" style="display: flex; padding: 11px 68px 11px 0px;">
+        <div class="nav-container">
             <div class="nav-links">
-                <a href="">Home</a>
-                <a href="">About Us</a>
-                <a href="" class="gallery">Gallery</a>
-                <a href="">Pricing</a>
-                <a href="" class="blog">Blog</a>
-                <a href="">Contact Us</a>
-                <a href="">Pages</a>
+                <a href="#" class="active">Home</a>
+                <a href="#">About Us</a>
+                <a href="#" class="gallery">Gallery</a>
+                <a href="#">Pricing</a>
+                <a href="#" class="blog">Blog</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Pages</a>
             </div>
             <div class="nav-shares">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <i class="fa-solid fa-share-nodes"></i>
+            </div>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
     </header>
 
     <!-- Carousel -->
     <div class="carousel">
+        <div class="carousel-counter">
+            <span class="current-slide">01</span> / <span class="total-slides">03</span>
+        </div>
         <div class="carousel-container">
             <div class="carousel-item" style="background-image: url('./images/homebg1.png');">
                 <div class="carousel-content">
@@ -61,8 +71,56 @@
                 </div>
             </div>
         </div>
+        <div class="carousel-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
     </div>
 
+    <!-- lastest carusel -->
+    <div class="container">
+        <!-- Tablet Section -->
+        <div class="tablet">
+            <img src="./images/planshet.png" alt="Tablet Illustration">
+        </div>
+
+        <!-- Services Section -->
+        <div class="services">
+            <!-- Service Card 1 -->
+            <div class="service-card">
+                <h3>See all services</h3>
+                <div class="servise_line"></div>
+                <button>ALL SERVICES</button>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="service-card">
+                <div class="service-card_con"><i class="fa-solid fa-phone-volume"></i></div>
+                <a>CORPORATE SOLUTIONS</a>
+                <div class="servise_line"></div>
+                <p>Need specific software for your company? We are ready to develop it!</p>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="service-card">
+                <div class="service-card_con"><i class="fa-solid fa-headset"></i></div>
+                <a>CALL CENTER SOLUTIONS</a>
+                <div class="servise_line"></div>
+                <p>Our experts provide custom products for call centers.</p>
+            </div>
+
+            <!-- Service Card 4 -->
+            <div class="service-card">
+                <div class="service-card_con"><i class="fa-solid fa-square-arrow-up-right"></i></div>
+                <a>CLOUD DEVELOPMENT</a>
+                <div class="servise_line"></div>
+                <p>We can also offer you reliable cloud development.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/home.js"></script>
 </body>
 
 </html>
